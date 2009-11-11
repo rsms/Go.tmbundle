@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "${TM_FILENAME}"
+cd "$TM_DIRECTORY"
+FN=$(echo "${TM_FILENAME}" | sed 's/\.go$//g')
+
+export GOOS=darwin
+N=6
+if [ "$(uname -m)" = "i386" ]; then
+	N=8
+	export GOARCH=386
+else
+	export GOARCH=amd64
+fi
+if [ -d "$HOME/go" ]; then
+	export GOROOT="$HOME/go"
+elif [ -d "$HOME/src/go" ]; then
+	export GOROOT="$HOME/src/go"
+fi
+
+echo '&lt;h2&gt;Compiling, linking and running ('$GOARCH')..&lt;/h2&gt;'
+${N}g -o ".$FN.${N}" "$TM_FILENAME"
+${N}l -o ".$FN.${N}-out" ".$FN.${N}"
+./".$FN.${N}-out" | pre
+rm -f ".$FN.${N}" ".$FN.${N}-out"
+
+html_footer
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Compile &amp; Run Single File</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.go</string>
+	<key>uuid</key>
+	<string>C73537E4-2AE2-45E3-858F-5196F1FCA169</string>
+</dict>
+</plist>

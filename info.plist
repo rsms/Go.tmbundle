@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Go</string>
+	<key>ordering</key>
+	<array>
+		<string>B64C47C0-FDE6-434B-A547-B6D05DC2CC90</string>
+		<string>EB8D7F13-DE13-4EBF-9728-AEEEC4817878</string>
+		<string>184C6993-EB89-484E-A6EB-070935D5A2DF</string>
+		<string>C73537E4-2AE2-45E3-858F-5196F1FCA169</string>
+		<string>A0C5A834-2DC9-46C9-A9BD-AE962865DB46</string>
+		<string>F2793E12-5D26-4C4A-91C5-2F1185D1EB5C</string>
+		<string>FFE12F32-B355-44E3-BB0F-27667F9DC4B5</string>
+	</array>
+	<key>uuid</key>
+	<string>C997AC69-39A9-4AD0-8BB7-83979AE800BB</string>
+</dict>
+</plist>
