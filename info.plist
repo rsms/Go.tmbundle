@@ -4,6 +4,12 @@
 <dict>
 	<key>name</key>
 	<string>Go</string>
+	<key>contactEmailRot13</key>
+	<string>enfzhf@abgvba.fr</string>
+	<key>contactName</key>
+	<string>Rasmus Andersson</string>
+	<key>description</key>
+	<string>Support for the &lt;a href="http://golang.org/"&gt;Go programming language&lt;/a&gt;</string>
 	<key>ordering</key>
 	<array>
 		<string>B64C47C0-FDE6-434B-A547-B6D05DC2CC90</string>
