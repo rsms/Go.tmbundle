@@ -10,18 +10,22 @@ html_header "${TM_FILENAME}"
 cd "$TM_DIRECTORY"
 FN=$(echo "${TM_FILENAME}" | sed 's/\.go$//g')
 
-export GOOS=darwin
-N=6
-if [ "$(sysctl -n hw.cpu64bit_capable)" = 1 ]; then
-	export GOARCH=amd64
-else
-	N=8
-	export GOARCH=386
+if [ -z "$GOOS" ]; then export GOOS=darwin; fi
+if [ -z "$GOARCH" ]; then
+	if [ "$(sysctl -n hw.cpu64bit_capable)" = 1 ]; then
+		export GOARCH=amd64
+	else
+		export GOARCH=386
+	fi
 fi
-if [ -d "$HOME/go" ]; then
-	export GOROOT="$HOME/go"
-elif [ -d "$HOME/src/go" ]; then
-	export GOROOT="$HOME/src/go"
+N=6
+if [ $GOARCH = "386" ]; then N=8; fi
+if [ -z "$GOROOT" ]; then
+	if [ -d "$HOME/go" ]; then
+		export GOROOT="$HOME/go"
+	elif [ -d "$HOME/src/go" ]; then
+		export GOROOT="$HOME/src/go"
+	fi
 fi
 
 echo '&lt;h2&gt;Compiling, linking and running ('$GOARCH')..&lt;/h2&gt;'
