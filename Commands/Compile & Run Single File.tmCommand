@@ -12,11 +12,11 @@ FN=$(echo "${TM_FILENAME}" | sed 's/\.go$//g')
 
 export GOOS=darwin
 N=6
-if [ "$(uname -m)" = "i386" ]; then
+if [ "$(sysctl -n hw.cpu64bit_capable)" = 1 ]; then
+	export GOARCH=amd64
+else
 	N=8
 	export GOARCH=386
-else
-	export GOARCH=amd64
 fi
 if [ -d "$HOME/go" ]; then
 	export GOROOT="$HOME/go"
