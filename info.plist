@@ -2,20 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>name</key>
-	<string>Go</string>
 	<key>contactEmailRot13</key>
 	<string>enfzhf@abgvba.fr</string>
 	<key>contactName</key>
 	<string>Rasmus Andersson</string>
 	<key>description</key>
 	<string>Support for the &lt;a href="http://golang.org/"&gt;Go programming language&lt;/a&gt;</string>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>184C6993-EB89-484E-A6EB-070935D5A2DF</string>
+			<string>C73537E4-2AE2-45E3-858F-5196F1FCA169</string>
+			<string>8E34D3FD-11D5-45CB-A4B5-D9546D6A319B</string>
+			<string>A0C5A834-2DC9-46C9-A9BD-AE962865DB46</string>
+			<string>F2793E12-5D26-4C4A-91C5-2F1185D1EB5C</string>
+			<string>FFE12F32-B355-44E3-BB0F-27667F9DC4B5</string>
+		</array>
+		<key>submenus</key>
+		<dict/>
+	</dict>
+	<key>name</key>
+	<string>Go</string>
 	<key>ordering</key>
 	<array>
 		<string>B64C47C0-FDE6-434B-A547-B6D05DC2CC90</string>
 		<string>EB8D7F13-DE13-4EBF-9728-AEEEC4817878</string>
 		<string>184C6993-EB89-484E-A6EB-070935D5A2DF</string>
 		<string>C73537E4-2AE2-45E3-858F-5196F1FCA169</string>
+		<string>8E34D3FD-11D5-45CB-A4B5-D9546D6A319B</string>
 		<string>A0C5A834-2DC9-46C9-A9BD-AE962865DB46</string>
 		<string>F2793E12-5D26-4C4A-91C5-2F1185D1EB5C</string>
 		<string>FFE12F32-B355-44E3-BB0F-27667F9DC4B5</string>
